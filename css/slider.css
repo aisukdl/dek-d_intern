@@ -1,0 +1,106 @@
+body{
+    text-align: center;
+}
+
+.container{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.slider{
+    display: none;
+    position: absolute;
+}
+
+.next{
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    padding: auto;
+    top: calc(50% - 20px);
+}
+
+.fa-arrow-right{
+    top: 30%;
+    right: 30%;
+    position: absolute;
+    color: white;
+}
+
+.fa-arrow-right:hover{
+    color: black;
+}
+
+.back{
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    padding: auto;
+    top: calc(50% - 20px);
+}
+
+.fa-arrow-left{
+    top: 30%;
+    right: 30%;
+    position: absolute;
+    color: white;
+}
+
+.fa-arrow-left:hover{
+    color: black;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 5px;
+}
+
+.dot-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 30px);
+}
+
+.active{
+    display: block;
+}
+
+img{
+    object-fit: cover;
+    width: 1000px;
+    height: 500px;
+}
+
+.slideBack {
+    position: absolute;
+    left: -1000px;
+    transition: left 2s ease;
+}
+
+.slideBack-active {
+    left: 0px;
+}
+
+.slideNext {
+    position: absolute;
+    right: -1000px;
+    transition: right 2s ease;
+}
+
+.slideNext-active {
+    right: 0px;
+}

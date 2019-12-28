@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <script src="Scripts/Slider.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="slider active" id="">
+        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b">
+      </div>
+
+      <div class="slider" id="">
+        <img src="https://images.unsplash.com/photo-1542272201-b1ca555f8505">
+      </div>
+
+      <div class="slider" id="">
+        <img src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7">
+      </div>
+
+      <div class="next">
+        <i class="fas fa-arrow-right" onclick="next()"></i>
+      </div>
+
+      <div class="back">
+        <i class="fas fa-arrow-left" onclick="prev()"></i>
+      </div>
+      
+      <div class="dot-container">
+        <div class="dot" onclick="current(1)"></div>
+        <div class="dot" onclick="current(2)"></div>
+        <div class="dot" onclick="current(3)"></div>
+      </div>
+      
+
+    </div>
+        
+
+  </body>
+
+</html>
