@@ -9,6 +9,8 @@ function next() {
     for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" slideNext", "");
     }
+    slides[index-1].className += " slideNext";
+
 }
 
 function prev() {
@@ -17,6 +19,7 @@ function prev() {
     for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" slideBack", "");
     }
+    slides[index-1].className += " slideBack";
 }
 
 function current(n) {
