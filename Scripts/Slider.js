@@ -1,13 +1,22 @@
 var index = 1;
+var i;
+var slides = document.getElementsByClassName("slider");
 
 function next() {
+    var i;
     index++;
     show(index);
+    for (i = 0; i < slides.length; i++) {
+        slides[i].className = slides[i].className.replace(" slideNext", "");
+    }
 }
 
 function prev() {
     index--;
     show(index);
+    for (i = 0; i < slides.length; i++) {
+        slides[i].className = slides[i].className.replace(" slideBack", "");
+    }
 }
 
 function current(n) {
@@ -15,8 +24,6 @@ function current(n) {
 }
 
 function show(n) {
-  var i;
-  var slides = document.getElementsByClassName("slider");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
       index = 1
