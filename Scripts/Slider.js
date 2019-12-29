@@ -3,7 +3,6 @@ var i;
 var slides = document.getElementsByClassName("slider");
 
 function next() {
-    var i;
     index++;
     show(index);
     for (i = 0; i < slides.length; i++) {
@@ -14,7 +13,6 @@ function next() {
 }
 
 function prev() {
-    var i;
     index--;
     show(index);
     for (i = 0; i < slides.length; i++) {
