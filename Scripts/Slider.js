@@ -34,12 +34,12 @@ function show(n) {
       index = slides.length
   }
   for (i = 0; i < slides.length; i++) {
-      slides[i].className = slides[i].className.replace(" active", "");
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[index-1].className += " active";  
+  slides[index-1].style.display = "block"; 
   dots[index-1].className += " active";
 }
 

@@ -76,7 +76,6 @@ body{
 }
 
 .active{
-    display: block;
     background-color: white;
 }
 
