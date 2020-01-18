@@ -25,7 +25,9 @@ function current(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" slideBack", "");
         slides[i].className = slides[i].className.replace(" slideNext", "");
+        slides[i].className = slides[i].className.replace(" fade", "");
     }
+    slides[n-1].className += " fade";
     show(index = n);
 }
 
