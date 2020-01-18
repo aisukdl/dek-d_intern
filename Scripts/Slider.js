@@ -2,13 +2,18 @@ var index = 1;
 var i;
 var slides = document.getElementsByClassName("slider");
 
-function next() {
-    index++;
-    show(index);
+function clearClass(){
     for (i = 0; i < slides.length; i++) {
+        slides[i].className = slides[i].className.replace(" slideBack", "");
         slides[i].className = slides[i].className.replace(" slideNext", "");
         slides[i].className = slides[i].className.replace(" fade", "");
     }
+}
+
+function next() {
+    index++;
+    show(index);
+    clearClass();
     slides[index-1].className += " slideNext";
 
 }
@@ -16,19 +21,12 @@ function next() {
 function prev() {
     index--;
     show(index);
-    for (i = 0; i < slides.length; i++) {
-        slides[i].className = slides[i].className.replace(" slideBack", "");
-        slides[i].className = slides[i].className.replace(" fade", "");
-    }
+    clearClass();
     slides[index-1].className += " slideBack";
 }
 
 function current(n) {
-    for (i = 0; i < slides.length; i++) {
-        slides[i].className = slides[i].className.replace(" slideBack", "");
-        slides[i].className = slides[i].className.replace(" slideNext", "");
-        slides[i].className = slides[i].className.replace(" fade", "");
-    }
+    clearClass();
     slides[n-1].className += " fade";
     show(index = n);
 }
