@@ -7,6 +7,7 @@ function next() {
     show(index);
     for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" slideNext", "");
+        slides[i].className = slides[i].className.replace(" fade", "");
     }
     slides[index-1].className += " slideNext";
 
@@ -17,6 +18,7 @@ function prev() {
     show(index);
     for (i = 0; i < slides.length; i++) {
         slides[i].className = slides[i].className.replace(" slideBack", "");
+        slides[i].className = slides[i].className.replace(" fade", "");
     }
     slides[index-1].className += " slideBack";
 }
