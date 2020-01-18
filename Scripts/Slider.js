@@ -22,7 +22,11 @@ function prev() {
 }
 
 function current(n) {
-  show(index = n);
+    for (i = 0; i < slides.length; i++) {
+        slides[i].className = slides[i].className.replace(" slideBack", "");
+        slides[i].className = slides[i].className.replace(" slideNext", "");
+    }
+    show(index = n);
 }
 
 function show(n) {
